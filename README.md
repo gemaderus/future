@@ -1,6 +1,6 @@
 # Origen
 
-Sandbox tooling made with express, sass, grunt and love. Ready for Heroku deployment.
+Sandbox tooling made with express, sass, grunt and love.
 
 ## Requirements
 
@@ -12,7 +12,7 @@ You'll need to have the following items installed before continuing.
 ## Quickstart
 
 ```bash
-git clone git@github.com:nobuti/origen.git
+git clone git@github.com:gemaderus/origen.git
 npm install
 ```
 
