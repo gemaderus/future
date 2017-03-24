@@ -2,6 +2,10 @@
 
 @import "sandbox/base/normalize";
 
+/* 2. Settings */
+
+@import "sandbox/settings/variables";
+
 /* 4. Base */
 
 @import "sandbox/base/global";
@@ -10,3 +14,10 @@
 @import "sandbox/base/links";
 @import "sandbox/base/label";
 @import "sandbox/base/paragraphs";
+
+/* 5. Components */
+
+@import "sandbox/components/footer";
+@import "sandbox/components/background";
+@import "sandbox/components/home";
+@import "sandbox/components/slide";
