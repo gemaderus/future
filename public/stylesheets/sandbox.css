@@ -470,12 +470,24 @@ Home
 
 */
 .home .title {
-  font-size: 10rem;
+  font-size: 11rem;
   letter-spacing: -2px;
-  line-height: 0.8;
+  line-height: 1;
   text-transform: uppercase; }
-  .home .title span {
-    display: block; }
+
+.home .title-left,
+.home .title-right {
+  position: absolute;
+  z-index: 10;
+  color: #fff; }
+
+.home .title-left {
+  left: -3%;
+  width: 100%; }
+
+.home .title-right {
+  right: -7%;
+  display: block; }
 
 .home .learn-more {
   font-size: 1.2rem;
@@ -490,7 +502,10 @@ Home
   color: #fff;
   position: relative;
   z-index: 10;
-  padding: 3.5rem 4rem 5rem; }
+  padding: 3.5rem 4rem 5rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .home-footer {
   display: -webkit-box;
@@ -505,9 +520,21 @@ Slide
 
 */
 .slide {
-  position: absolute;
+  width: 100vw;
+  height: 100vh; }
+
+.slide-holder {
   width: 81%;
   height: 70%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.slide-inner {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -539,9 +566,6 @@ Slide
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 100%; }
 
 .slide-footer {
