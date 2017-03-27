@@ -1,0 +1,27 @@
+/*
+
+Modal
+------
+
+*/
+
+.work-modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  background-color: rbga(11, 27, 43, 0.9);
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.work-modal-content {
+  max-width: 60rem;
+}
+
+.modal-action {
+  display: flex;
+  justify-content: space-between;
+}

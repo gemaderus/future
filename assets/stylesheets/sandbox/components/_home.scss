@@ -52,6 +52,12 @@ Home
   //padding: 8.5rem 9rem 9.8rem;
 }
 
+.home-gradient {
+  opacity: 0.3;
+  background-image: linear-gradient(to right, #0A1B2B 34%, rgba(0,0,0,0) 72%);
+}
+
+
 .home-footer {
   display: flex;
   font-size: 2rem;

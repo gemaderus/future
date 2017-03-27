@@ -1,0 +1,37 @@
+/*
+
+Works
+------
+
+*/
+
+.work-content {
+  padding: 3.5rem 4rem 5rem 9rem;
+  justify-content: space-between;
+}
+
+.work-info {
+  position: relative;
+  z-index: 20;
+  max-width: 35rem;
+}
+
+.work-title {
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 3rem;
+
+  span {
+    display: block;
+  }
+}
+
+.work-description {
+  margin-bottom: 2rem;
+}
+
+.works-gradient {
+  opacity: 0.9;
+  background-image: linear-gradient(to right, #0A1B2B 34%, rgba(0,0,0,0) 72%);
+}

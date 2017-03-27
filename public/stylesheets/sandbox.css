@@ -282,7 +282,7 @@ Variables
 ------
 
 */
-/* 4. Base */
+/* 3. Base */
 /*
 
 Global
@@ -371,6 +371,37 @@ Reset default styles on paragraphs.
 p {
   margin: 0; }
 
+/* 4. Helpers */
+/*
+
+Colors
+------
+
+*/
+.bgc-pink {
+  background-color: #eb416d; }
+
+.bgc-purple {
+  background-color: #d15cd3; }
+
+.bgc-green {
+  background-color: #c6ff65; }
+
+.bgc-blue {
+  background-color: #00dfff; }
+
+.text-color-pink {
+  color: #eb416d; }
+
+.text-color-purple {
+  color: #d15cd3; }
+
+.text-color-green {
+  color: #c6ff65; }
+
+.text-color-blue {
+  color: #00dfff; }
+
 /* 5. Components */
 /*
 
@@ -456,6 +487,9 @@ Background
 .background-home {
   background-image: url(../images/girl-light.jpg); }
 
+.background-work {
+  background-image: url(../images/ray.jpg); }
+
 /* Rectangle: */
 /* ray_screen copy: */
 /* Rectangle 3: */
@@ -507,6 +541,11 @@ Home
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
+.home-gradient {
+  opacity: 0.3;
+  background-image: -webkit-linear-gradient(left, #0A1B2B 34%, transparent 72%);
+  background-image: linear-gradient(to right, #0A1B2B 34%, transparent 72%); }
+
 .home-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,14 +588,13 @@ Slide
   box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.5); }
 
 .slide-gradient {
-  opacity: 0.3;
-  background-image: -webkit-linear-gradient(189deg, #0A1B2B 34%, transparent 72%);
-  background-image: linear-gradient(-99deg, #0A1B2B 34%, transparent 72%);
   height: 100%;
   width: 80%;
   position: absolute;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 10;
+  left: 0; }
 
 .slide-content {
   display: -webkit-box;
@@ -574,7 +612,127 @@ Slide
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  position: relative;
+  z-index: 20; }
 
 .slide-footer-project {
   text-align: right; }
+
+/*
+
+Works
+------
+
+*/
+.work-content {
+  padding: 3.5rem 4rem 5rem 9rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.work-info {
+  position: relative;
+  z-index: 20;
+  max-width: 35rem; }
+
+.work-title {
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 3rem; }
+  .work-title span {
+    display: block; }
+
+.work-description {
+  margin-bottom: 2rem; }
+
+.works-gradient {
+  opacity: 0.9;
+  background-image: -webkit-linear-gradient(left, #0A1B2B 34%, transparent 72%);
+  background-image: linear-gradient(to right, #0A1B2B 34%, transparent 72%); }
+
+/*
+
+Separator
+------
+
+*/
+.separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  margin-bottom: 3rem; }
+
+.separator-logo {
+  margin-right: 1.5rem; }
+
+.separator-border {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 2px; }
+
+/*
+
+Play icon
+------
+
+*/
+.play-icon-rounded {
+  position: absolute;
+  z-index: 20;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: -4rem;
+  top: 3.5rem; }
+  .play-icon-rounded svg {
+    display: inline-block; }
+
+/*
+
+Modal
+------
+
+*/
+.work-modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  background-color: rbga(11, 27, 43, 0.9);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.work-modal-content {
+  max-width: 60rem; }
+
+.modal-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
