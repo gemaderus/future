@@ -5,8 +5,15 @@ Works
 
 */
 
+.works {
+  .slide-footer {
+    opacity: 0;
+    transition: all 0.5s 0.5s;
+  }
+}
+
 .work-content {
-  padding: 3.5rem 4rem 5rem 9rem;
+  padding: 3.5rem 4rem 5rem 7rem;
   justify-content: space-between;
 }
 
@@ -21,6 +28,8 @@ Works
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 3rem;
+  transition: all 0.5s 0.1s;
+  opacity: 0;
 
   span {
     display: block;
@@ -29,9 +38,26 @@ Works
 
 .work-description {
   margin-bottom: 2rem;
+  transition: all 0.5s 0.3s;
+  opacity: 0;
 }
 
 .works-gradient {
   opacity: 0.9;
   background-image: linear-gradient(to right, #0A1B2B 34%, rgba(0,0,0,0) 72%);
+}
+
+.animation-slide {
+  .work-title,
+  .separator,
+  .work-description,
+  .slide-footer {
+    opacity: 1;
+    transform: translateX(2rem);
+  }
+
+  .btn-play-rounded {
+    transform: translateX(-4rem);
+    opacity: 1;
+  }
 }
