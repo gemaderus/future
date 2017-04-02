@@ -61,3 +61,57 @@ Footer
   width: 100%;
   background-color: #444;
 }
+
+.footer-has-mail {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11rem 6rem 6rem;
+  background-image: linear-gradient(0deg, #0A1B2B 60%, rgba(10,27,43,0.00) 100%);
+  font-size: 1.2rem;
+  z-index: 20;
+
+  .mail {
+    font-size: 2rem;
+    color: #ED5B81;
+  }
+}
+
+.footer-mail-holder {
+  width: 94rem;
+  margin: auto;
+}
+
+.footer-logo {
+  position: absolute;
+  left: 6rem;
+  font-size: 1.2rem;
+
+  a {
+    color: $white;
+  }
+}
+
+.footer-navigation {
+  position: absolute;
+  right: 6rem;
+}
+
+.footer-mail {
+  width: 100%;
+  display: flex;
+
+  .mail {
+    width: 74.4681%;
+    display: flex;
+    align-content: flex-end;
+    margin-left: auto;
+  }
+}
+
+
+

@@ -1,0 +1,92 @@
+/*
+
+About
+------
+
+*/
+
+.about {
+  background-image: url("../images/about.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  padding-top: 14rem;
+  color: $white;
+  background-color: #0A1b2b;
+  position: relative;
+}
+
+.about-holder {
+  max-width: 94rem;
+  margin: auto;
+  position: relative;
+  z-index: 20;
+}
+
+.about-claim {
+  margin-bottom: 9rem;
+}
+
+.about-content-inner {
+  display: flex;
+  line-height: 3.2rem;
+}
+
+.about-title {
+  width: 25.5319%;
+  text-transform: uppercase;
+  text-align: right;
+  padding-right: 6rem;
+
+  h6 {
+    font-size: 1.2rem;
+  }
+}
+
+.about-description {
+  width: 74.4681%;
+  max-width: 60rem;
+  font-size: 2rem;
+
+  p {
+    margin-bottom: 4.4rem;
+  }
+}
+
+.about-description {
+  padding-bottom: 11.4rem;
+}
+
+.about-description.last {
+  padding-bottom: 0;
+}
+
+.about-link-holder {
+  text-align: center;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  margin-bottom: 4.4rem;
+}
+
+.about-link {
+  color: #3178ff;
+}
+
+.about-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-profiles-item {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.about-city {
+  display: block;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.6rem;
+}
+
