@@ -22,19 +22,35 @@ Colors
 }
 
 .text-color-pink {
-  color: #eb416d
+  color: #eb416d;
+
+  &:hover:after {
+    background-color: #eb416d;
+  }
 }
 
 .text-color-purple {
   color: #d15cd3;
+
+  &:hover:after {
+    background-color: #d15cd3;
+  }
 }
 
 .text-color-green {
   color: #c6ff65;
+
+  &:hover:after {
+    background-color: #c6ff65;
+  }
 }
 
 .text-color-blue {
   color: #00dfff;
+
+  &:hover:after {
+    background-color: #00dfff;
+  }
 }
 
 

@@ -14,9 +14,10 @@ General fonts and other global styles of the page.
 }
 
 html {
-  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 62.5%;
   line-height: 1.5;
   position: relative;

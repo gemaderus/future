@@ -10,17 +10,23 @@ Works
     opacity: 0;
     transition: all 0.5s 0.5s;
   }
+
+  .learn-more {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
 }
 
 .work-content {
-  padding: 3.5rem 4rem 5rem 7rem;
+  padding: 4.5vw 4rem 4vw 7rem;
   justify-content: space-between;
 }
 
 .work-info {
   position: relative;
   z-index: 20;
-  max-width: 35rem;
+  max-width: 36rem;
 }
 
 .work-title {
@@ -30,6 +36,7 @@ Works
   margin-bottom: 3rem;
   transition: all 0.5s 0.1s;
   opacity: 0;
+  font-weight: 300;
 
   span {
     display: block;
@@ -37,9 +44,13 @@ Works
 }
 
 .work-description {
-  margin-bottom: 2rem;
   transition: all 0.5s 0.3s;
   opacity: 0;
+  font-weight: 300;
+
+  p {
+    margin-bottom: 1.6rem;
+  }
 }
 
 .works-gradient {

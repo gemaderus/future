@@ -10,8 +10,43 @@ Links styles.
 a {
   cursor: pointer;
   text-decoration: none;
+  transition: border-bottom 0.5s ease;
+  position: relative;
 
-  &:hover {
-    text-decoration: underline;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 1px;
+    width: 0;
+    transition: width 0.25s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
   }
 }
+
+a.is-active:after {
+  width: 100%;
+  background-color: $white;
+}
+
+
+// .main-menu-item a:after {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   left: 50%;
+//   transform: translate(-50%, 0);
+//   height: 1px;
+//   width: 0;
+//   transition: width 0.25s ease;
+// }
+
+// .main-menu-item a:hover:after {
+//   background-color: #999;
+//   width: 100%;
+// }

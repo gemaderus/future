@@ -7,10 +7,10 @@ Home
 
 .home {
   .title {
-    font-size: 10vw;
+    font-size: 8vw;
     //font-size: 16rem;
     letter-spacing: -2px;
-    line-height: 1;
+    line-height: 0.9;
     text-transform: uppercase;
   }
 
@@ -19,6 +19,7 @@ Home
     position: absolute;
     z-index: 10;
     color: $white;
+    font-weight: 700;
   }
 
   .title-left {
@@ -35,6 +36,11 @@ Home
     font-size: 1.2rem;
     color: #27A8E5;
     text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover:after {
+      background-color: #27A8E5;
+    }
   }
 }
 

@@ -14,8 +14,13 @@ Footer
   font-size: 1.2rem;
   text-transform: uppercase;
 
+  a {
+    font-weight: 700;
+  }
+
   h1 {
     font-size: 1.2rem;
+    line-height: 2rem;
 
     a {
       color: $white;
@@ -23,8 +28,15 @@ Footer
   }
 }
 
+.footer-logo {
+  a:hover:after {
+    background-color: $white;
+  }
+}
+
 .footer nav {
   margin-left: auto;
+  line-height: 2rem;
 }
 
 .main-menu {
@@ -36,30 +48,20 @@ Footer
 }
 
 .main-menu-item a {
-  text-decoration: none;
-  transition: border-bottom 0.5s ease;
-  position: relative;
   color: $gray;
-}
 
-.main-menu-item a:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  height: 1px;
-  width: 0;
-  transition: width 0.25s ease;
+  &.is-active {
+    color: $white;
+  }
 }
 
 .main-menu-item a:hover:after {
-  background-color: #999;
-  width: 100%;
+  background-color: $gray;
+  // width: 100%;
 }
 .main-menu-item a.is-active:after {
-  width: 100%;
-  background-color: #444;
+  // width: 100%;
+  background-color: $white;
 }
 
 .footer-has-mail {
@@ -67,49 +69,51 @@ Footer
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 11rem 6rem 6rem;
   background-image: linear-gradient(0deg, #0A1B2B 60%, rgba(10,27,43,0.00) 100%);
   font-size: 1.2rem;
   z-index: 20;
+  min-height: 19rem;
+
+  .footer-logo {
+    position: absolute;
+    left: 6rem;
+    font-size: 1.2rem;
+
+    a {
+      color: $white;
+    }
+  }
 
   .mail {
     font-size: 2rem;
     color: #ED5B81;
+  }
+
+  nav {
+    position: absolute;
+    right: 6rem;
   }
 }
 
 .footer-mail-holder {
   width: 94rem;
   margin: auto;
-}
-
-.footer-logo {
-  position: absolute;
-  left: 6rem;
-  font-size: 1.2rem;
-
-  a {
-    color: $white;
-  }
-}
-
-.footer-navigation {
-  position: absolute;
-  right: 6rem;
+  line-height: 2rem;
 }
 
 .footer-mail {
   width: 100%;
-  display: flex;
 
   .mail {
     width: 74.4681%;
     display: flex;
     align-content: flex-end;
     margin-left: auto;
+    text-transform: none;
+    font-weight: 400;
   }
 }
 

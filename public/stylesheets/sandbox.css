@@ -297,8 +297,10 @@ General fonts and other global styles of the page.
   box-sizing: inherit; }
 
 html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 62.5%;
   line-height: 1.5;
   position: relative; }
@@ -345,9 +347,27 @@ Links styles.
 */
 a {
   cursor: pointer;
-  text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
+  text-decoration: none;
+  -webkit-transition: border-bottom 0.5s ease;
+  transition: border-bottom 0.5s ease;
+  position: relative; }
+  a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    height: 1px;
+    width: 0;
+    -webkit-transition: width 0.25s ease;
+    transition: width 0.25s ease; }
+  a:hover:after {
+    width: 100%; }
+
+a.is-active:after {
+  width: 100%;
+  background-color: #fff; }
 
 /*
 
@@ -392,15 +412,23 @@ Colors
 
 .text-color-pink {
   color: #eb416d; }
+  .text-color-pink:hover:after {
+    background-color: #eb416d; }
 
 .text-color-purple {
   color: #d15cd3; }
+  .text-color-purple:hover:after {
+    background-color: #d15cd3; }
 
 .text-color-green {
   color: #c6ff65; }
+  .text-color-green:hover:after {
+    background-color: #c6ff65; }
 
 .text-color-blue {
   color: #00dfff; }
+  .text-color-blue:hover:after {
+    background-color: #00dfff; }
 
 /* 5. Components */
 /*
@@ -419,13 +447,20 @@ Footer
   display: flex;
   font-size: 1.2rem;
   text-transform: uppercase; }
+  .footer a {
+    font-weight: 700; }
   .footer h1 {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    line-height: 2rem; }
     .footer h1 a {
       color: #fff; }
 
+.footer-logo a:hover:after {
+  background-color: #fff; }
+
 .footer nav {
-  margin-left: auto; }
+  margin-left: auto;
+  line-height: 2rem; }
 
 .main-menu {
   display: -webkit-box;
@@ -436,40 +471,21 @@ Footer
   padding: 0 1rem; }
 
 .main-menu-item a {
-  text-decoration: none;
-  -webkit-transition: border-bottom 0.5s ease;
-  transition: border-bottom 0.5s ease;
-  position: relative;
   color: rgba(255, 255, 255, 0.6); }
-
-.main-menu-item a:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  height: 1px;
-  width: 0;
-  -webkit-transition: width 0.25s ease;
-  transition: width 0.25s ease; }
+  .main-menu-item a.is-active {
+    color: #fff; }
 
 .main-menu-item a:hover:after {
-  background-color: #999;
-  width: 100%; }
+  background-color: rgba(255, 255, 255, 0.6); }
 
 .main-menu-item a.is-active:after {
-  width: 100%;
-  background-color: #444; }
+  background-color: #fff; }
 
 .footer-has-mail {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -480,31 +496,28 @@ Footer
   background-image: -webkit-linear-gradient(bottom, #0A1B2B 60%, rgba(10, 27, 43, 0) 100%);
   background-image: linear-gradient(0deg, #0A1B2B 60%, rgba(10, 27, 43, 0) 100%);
   font-size: 1.2rem;
-  z-index: 20; }
+  z-index: 20;
+  min-height: 19rem; }
+  .footer-has-mail .footer-logo {
+    position: absolute;
+    left: 6rem;
+    font-size: 1.2rem; }
+    .footer-has-mail .footer-logo a {
+      color: #fff; }
   .footer-has-mail .mail {
     font-size: 2rem;
     color: #ED5B81; }
+  .footer-has-mail nav {
+    position: absolute;
+    right: 6rem; }
 
 .footer-mail-holder {
   width: 94rem;
-  margin: auto; }
-
-.footer-logo {
-  position: absolute;
-  left: 6rem;
-  font-size: 1.2rem; }
-  .footer-logo a {
-    color: #fff; }
-
-.footer-navigation {
-  position: absolute;
-  right: 6rem; }
+  margin: auto;
+  line-height: 2rem; }
 
 .footer-mail {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  width: 100%; }
   .footer-mail .mail {
     width: 74.4681%;
     display: -webkit-box;
@@ -512,7 +525,9 @@ Footer
     display: flex;
     -ms-flex-line-pack: end;
         align-content: flex-end;
-    margin-left: auto; }
+    margin-left: auto;
+    text-transform: none;
+    font-weight: 400; }
 
 /*
 
@@ -603,16 +618,17 @@ Home
 
 */
 .home .title {
-  font-size: 10vw;
+  font-size: 8vw;
   letter-spacing: -2px;
-  line-height: 1;
+  line-height: 0.9;
   text-transform: uppercase; }
 
 .home .title-left,
 .home .title-right {
   position: absolute;
   z-index: 10;
-  color: #fff; }
+  color: #fff;
+  font-weight: 700; }
 
 .home .title-left {
   left: -3%;
@@ -625,7 +641,10 @@ Home
 .home .learn-more {
   font-size: 1.2rem;
   color: #27A8E5;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 700; }
+  .home .learn-more:hover:after {
+    background-color: #27A8E5; }
 
 .home-logo {
   font-size: 16rem;
@@ -668,7 +687,8 @@ Slide
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+          transform: translate(-50%, -50%);
+  padding-top: 3vw; }
 
 .slide-inner {
   width: 100%;
@@ -729,8 +749,13 @@ Works
   -webkit-transition: all 0.5s 0.5s;
   transition: all 0.5s 0.5s; }
 
+.works .learn-more {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem; }
+
 .work-content {
-  padding: 3.5rem 4rem 5rem 7rem;
+  padding: 4.5vw 4rem 4vw 7rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -738,7 +763,7 @@ Works
 .work-info {
   position: relative;
   z-index: 20;
-  max-width: 35rem; }
+  max-width: 36rem; }
 
 .work-title {
   font-size: 6.4rem;
@@ -747,15 +772,18 @@ Works
   margin-bottom: 3rem;
   -webkit-transition: all 0.5s 0.1s;
   transition: all 0.5s 0.1s;
-  opacity: 0; }
+  opacity: 0;
+  font-weight: 300; }
   .work-title span {
     display: block; }
 
 .work-description {
-  margin-bottom: 2rem;
   -webkit-transition: all 0.5s 0.3s;
   transition: all 0.5s 0.3s;
-  opacity: 0; }
+  opacity: 0;
+  font-weight: 300; }
+  .work-description p {
+    margin-bottom: 1.6rem; }
 
 .works-gradient {
   opacity: 0.9;
@@ -889,7 +917,7 @@ Modal
   font-weight: 400; }
 
 .modal-action-item h4 {
-  font-weight: 700; }
+  font-weight: 900; }
 
 /*
 
@@ -928,7 +956,8 @@ About
   text-align: right;
   padding-right: 6rem; }
   .about-title h6 {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    font-weight: 700; }
 
 .about-description {
   width: 74.4681%;
