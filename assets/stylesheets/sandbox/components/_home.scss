@@ -7,7 +7,7 @@ Home
 
 .home {
   .title {
-    font-size: 8vw;
+    font-size: 7vw;
     //font-size: 16rem;
     letter-spacing: -2px;
     line-height: 0.9;
@@ -17,7 +17,7 @@ Home
   .title-left,
   .title-right {
     position: absolute;
-    z-index: 10;
+    z-index: 20;
     color: $white;
     font-weight: 700;
   }
@@ -28,7 +28,7 @@ Home
   }
 
   .title-right {
-    right: -7%;
+    right: -6%;
     display: block;
   }
 

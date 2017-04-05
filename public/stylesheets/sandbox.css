@@ -554,28 +554,27 @@ Reset buttons styles.
   vertical-align: middle;
   text-transform: uppercase; }
 
-.btn-play-rounded {
+.btn-play-holder {
   position: absolute;
-  z-index: 20;
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   left: 0;
   top: 3.5rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 20; }
+
+.btn-play-rounded {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%; }
   .btn-play-rounded svg {
-    display: inline-block; }
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
 
 /*
 
@@ -618,7 +617,7 @@ Home
 
 */
 .home .title {
-  font-size: 8vw;
+  font-size: 7vw;
   letter-spacing: -2px;
   line-height: 0.9;
   text-transform: uppercase; }
@@ -626,7 +625,7 @@ Home
 .home .title-left,
 .home .title-right {
   position: absolute;
-  z-index: 10;
+  z-index: 20;
   color: #fff;
   font-weight: 700; }
 
@@ -635,7 +634,7 @@ Home
   width: 100%; }
 
 .home .title-right {
-  right: -7%;
+  right: -6%;
   display: block; }
 
 .home .learn-more {
@@ -798,7 +797,7 @@ Works
   -webkit-transform: translateX(2rem);
           transform: translateX(2rem); }
 
-.animation-slide .btn-play-rounded {
+.animation-slide .btn-play-holder {
   -webkit-transform: translateX(-4rem);
           transform: translateX(-4rem);
   opacity: 1; }
