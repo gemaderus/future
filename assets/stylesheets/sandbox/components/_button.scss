@@ -20,22 +20,29 @@ Reset buttons styles.
   transition: 0.25s;
   vertical-align: middle;
   text-transform: uppercase;
+  padding: 0;
 }
 
 .btn-play-holder {
   position: absolute;
-  left: 0;
-  top: 3.5rem;
+  right: 2rem;
+  bottom: 2rem;
   transition: all 0.5s;
   opacity: 0;
   z-index: 20;
+
+  @media screen and (min-width: 768px) {
+    left: 0;
+    top: 3.5rem;
+    right: auto;
+    bottom: auto;
+  }
 }
 
 .btn-play-rounded {
   position: relative;
-
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
 
   svg {
@@ -44,5 +51,17 @@ Reset buttons styles.
     top: 50%;
     left: 35%;
     transform: translateY(-50%);
+    width: 24px;
+    height: 28px;
+
+    @media screen and (min-width: 768px) {
+      width: 28px;
+      height: 32px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 8rem;
+    height: 8rem;
   }
 }

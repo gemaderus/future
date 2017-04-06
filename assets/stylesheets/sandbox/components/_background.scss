@@ -33,5 +33,7 @@ Background
 }
 
 .background-filter {
-  filter: saturate(1.75) contrast(1.2);
+  @media screen and (min-width: 768px) {
+    filter: saturate(1.75) contrast(1.2);
+  }
 }

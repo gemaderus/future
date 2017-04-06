@@ -19,18 +19,28 @@ Works
 }
 
 .work-content {
-  padding: 4.5vw 4rem 4vw 7rem;
-  justify-content: space-between;
+  justify-content: flex-end;
+  flex: 1;
+
+  @media screen and (min-width: 768px) {
+    padding: 4.5vw 4rem 4vw 7rem;
+    justify-content: space-between;
+  }
 }
 
 .work-info {
   position: relative;
   z-index: 20;
   max-width: 36rem;
+  margin-bottom: 3rem;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .work-title {
-  font-size: 6.4rem;
+  font-size: 4rem;
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 3rem;
@@ -41,21 +51,29 @@ Works
   span {
     display: block;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 6.4rem;
+  }
 }
 
 .work-description {
   transition: all 0.5s 0.3s;
   opacity: 0;
   font-weight: 300;
+  font-size: 1.6rem;
 
   p {
     margin-bottom: 1.6rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 2rem;
   }
 }
 
 .works-gradient {
   opacity: 0.9;
-  background-image: linear-gradient(to right, #0A1B2B 34%, rgba(0,0,0,0) 72%);
 }
 
 .animation-slide {
@@ -64,11 +82,18 @@ Works
   .work-description,
   .slide-footer {
     opacity: 1;
-    transform: translateX(2rem);
+    //transform: translateX(2rem);
+
+    @media screen and (min-width: 768px) {
+      transform: translateX(2rem);
+    }
   }
 
   .btn-play-holder {
-    transform: translateX(-4rem);
     opacity: 1;
+
+    @media screen and (min-width: 768px) {
+      transform: translateX(-4rem);
+    }
   }
 }

@@ -34,6 +34,8 @@ Slide
   color: $white;
   letter-spacing: 0;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
 
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -43,11 +45,6 @@ Slide
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 32px 0 rgba(0,0,0,0.50);
-    padding: 8vw 0 2vw 0;
-  }
-
-  @media screen and (min-width: 980px) {
-    padding: 4vw 0 2vw 0;
   }
 }
 
@@ -59,9 +56,11 @@ Slide
   bottom: 0;
   z-index: 10;
   left: 0;
+  background-image: linear-gradient(to bottom, transparent 60%, #0A1B2B 100%);
 
   @media screen and (min-width: 768px) {
     width: 80%;
+    background-image: linear-gradient(to right, #0A1B2B 34%, rgba(0,0,0,0) 72%);
   }
 }
 
@@ -78,11 +77,6 @@ Slide
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem;
-  }
-
-  @media screen and (min-width: 980px) {
-    padding: 0 5rem;
   }
 }
 
