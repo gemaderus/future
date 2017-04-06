@@ -11,13 +11,18 @@ Slide
 }
 
 .slide-holder {
-  width: 81%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding-top: 3vw;
+
+  @media screen and (min-width: 768px) {
+    width: 81%;
+    height: 70%;
+  }
 }
 
 .slide-inner {
@@ -53,12 +58,27 @@ Slide
 }
 
 .slide-footer {
-  display: flex;
-  justify-content: space-between;
+
   position: relative;
   z-index: 20;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .slide-footer-project {
-  text-align: right;
+
+  p {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: right;
+
+    p {
+      display: block;
+    }
+  }
 }
