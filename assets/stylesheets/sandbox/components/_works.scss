@@ -21,10 +21,12 @@ Works
 .work-content {
   justify-content: flex-end;
   flex: 1;
+  margin-left: -2rem;
 
   @media screen and (min-width: 768px) {
     padding: 4.5vw 4rem 4vw 7rem;
     justify-content: space-between;
+    margin-left: 0;
   }
 }
 
@@ -82,7 +84,7 @@ Works
   .work-description,
   .slide-footer {
     opacity: 1;
-    //transform: translateX(2rem);
+    transform: translateX(2rem);
 
     @media screen and (min-width: 768px) {
       transform: translateX(2rem);
@@ -91,6 +93,7 @@ Works
 
   .btn-play-holder {
     opacity: 1;
+    transform: translateX(-8rem);
 
     @media screen and (min-width: 768px) {
       transform: translateX(-4rem);
