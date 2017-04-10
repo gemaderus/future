@@ -8,19 +8,32 @@ Modal
 .work-modal {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to bottom, #0A1B2B 34%, #0A1B2B 72%);
   opacity: 0.9;
   color: $white;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  background-image: linear-gradient(to bottom, transparent 30%, #0A1B2B 100%);
+  padding-bottom: 8rem;
+
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to bottom, #0A1B2B 34%, #0A1B2B 72%);
+    justify-content: center;
+    padding-bottom: 0;
+  }
 }
 
 
 .work-modal-intro {
   margin-bottom: 8rem;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 
   h1,
   h2 {
@@ -37,16 +50,92 @@ Modal
 }
 
 .work-modal-content {
-  width: 64rem;
+  @media screen and (min-width: 768px) {
+    width: 64rem;
+  }
 }
 
 .modal-action {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .modal-action-item {
-  .btn-modal {
+  margin-bottom: 6rem;
+
+  &:first-of-type {
+    h3, h4 {
+       @media screen and (max-width: 767px) {
+         display: inline-block;
+      }
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  svg {
+    fill: $white;
+
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+
+  .modal-image {
+    display: none;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+
+  h3,
+  h4 {
+    font-size: 4rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  h4 {
+    font-weight: 400;
+
+    @media screen and (min-width: 768px) {
+      font-weight: 900;
+    }
+  }
+}
+
+.btn-modal {
+  color: $white;
+
+  @media screen and (max-width: 767px) {
+    text-transform: none;
+  }
+
+  img,
+  svg {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
     width: 19.2rem;
     height: 19.2rem;
     border-radius: 50%;
@@ -55,36 +144,18 @@ Modal
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: $white;
+
 
     &:hover {
       text-decoration: none;
     }
-  }
 
-  .btn-modal.is-disabled {
-    opacity: 0.15;
+    img {
+      display: inline-block;
+    }
   }
+}
 
-  svg {
-    fill: $white;
-  }
-
-  .modal-image {
-    display: inline-block;
-    margin-bottom: 2rem;
-  }
-
-  h3,
-  h4 {
-    font-size: 1.8rem;
-  }
-
-  h3 {
-    font-weight: 400;
-  }
-
-  h4 {
-    font-weight: 900;
-  }
+.btn-modal.is-disabled {
+  opacity: 0.15;
 }
