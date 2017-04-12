@@ -6,16 +6,25 @@ Footer
 */
 
 .footer {
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
-  right: 30px;
-  display: flex;
-  font-size: 1.2rem;
-  text-transform: uppercase;
+  font-size: 4rem;
 
   a {
-    font-weight: 700;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    a {
+      font-weight: 700;
+    }
   }
 
   h1 {
@@ -29,26 +38,50 @@ Footer
 }
 
 .footer-logo {
+  display: none;
+
   a:hover:after {
     background-color: $white;
   }
-}
 
-.footer nav {
-  margin-left: auto;
-  line-height: 2rem;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
 
 .main-menu {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: left;
+  }
 }
 
 .main-menu-item {
-  padding: 0 1rem;
+  margin-bottom: 6rem;
+
+   @media screen and (min-width: 768px) {
+    padding: 0 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.main-menu-item.visible-xs {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .main-menu-item a {
-  color: $gray;
+  color: $white;
+
+  @media screen and (min-width: 768px) {
+    color: $gray;
+
+  }
 
   &.is-active {
     color: $white;
@@ -102,6 +135,7 @@ Footer
   width: 94rem;
   margin: auto;
   line-height: 2rem;
+  padding: 0 2rem;
 }
 
 .footer-mail {

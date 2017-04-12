@@ -1,0 +1,30 @@
+/*
+
+Navigation
+------
+
+*/
+
+.navigation {
+  line-height: 2rem;
+
+  @media screen and (max-width: 767px) {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(to bottom, #0A1B2B 34%, #0A1B2B 72%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+}
+
+.navigation.menu-opened {
+  display: flex;
+}

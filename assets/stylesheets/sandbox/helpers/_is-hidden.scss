@@ -1,0 +1,19 @@
+/*
+
+Display
+------
+
+*/
+
+
+.is-hidden-xs {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+
+    span {
+      display: inline-block;
+    }
+  }
+}
