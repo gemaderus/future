@@ -159,3 +159,9 @@ Modal
 .btn-modal.is-disabled {
   opacity: 0.15;
 }
+
+.degree {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
