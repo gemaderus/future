@@ -562,7 +562,8 @@ Footer
 .footer-mail-holder {
   width: 94rem;
   margin: auto;
-  line-height: 2rem; }
+  line-height: 2rem;
+  padding: 0 2rem; }
 
 .footer-mail {
   width: 100%; }
@@ -1180,32 +1181,51 @@ About
   z-index: 20; }
 
 .about-claim {
-  margin-bottom: 9rem; }
+  margin-bottom: 6rem; }
+  @media screen and (min-width: 768px) {
+    .about-claim {
+      margin-bottom: 9rem; } }
+  .about-claim svg {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .about-claim svg {
+        width: 940px;
+        height: 382px; } }
 
 .about-content-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 3.2rem; }
+  line-height: 3.2rem;
+  padding: 0 2rem; }
+  @media screen and (min-width: 768px) {
+    .about-content-inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .about-title {
-  width: 25.5319%;
   text-transform: uppercase;
-  text-align: right;
-  padding-right: 6rem; }
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 768px) {
+    .about-title {
+      width: 25.5319%;
+      text-align: right;
+      padding-right: 6rem;
+      margin-bottom: 0; } }
   .about-title h6 {
     font-size: 1.2rem;
     font-weight: 700; }
 
 .about-description {
-  width: 74.4681%;
   max-width: 60rem;
-  font-size: 2rem; }
+  font-size: 2rem;
+  padding-bottom: 6rem; }
+  @media screen and (min-width: 768px) {
+    .about-description {
+      width: 74.4681%;
+      padding-bottom: 11.4rem; } }
   .about-description p {
     margin-bottom: 4.4rem; }
-
-.about-description {
-  padding-bottom: 11.4rem; }
+    .about-description p:last-child {
+      margin-bottom: 0; }
 
 .about-description.last {
   padding-bottom: 0; }
@@ -1229,6 +1249,13 @@ About
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+.about-logos-item {
+  width: 50%;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .about-logos-item {
+      width: 33%; } }
 
 .about-profiles-item {
   padding: 3.5rem 0;
