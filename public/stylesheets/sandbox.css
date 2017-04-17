@@ -1278,7 +1278,7 @@ Navigation
     .navigation {
       width: 100vw;
       height: 100vh;
-      position: absolute;
+      position: fixed;
       top: 0;
       background-image: -webkit-linear-gradient(top, #0A1B2B 34%, #0A1B2B 72%);
       background-image: linear-gradient(to bottom, #0A1B2B 34%, #0A1B2B 72%);

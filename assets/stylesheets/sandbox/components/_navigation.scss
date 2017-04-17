@@ -11,7 +11,7 @@ Navigation
   @media screen and (max-width: 767px) {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     background-image: linear-gradient(to bottom, #0A1B2B 34%, #0A1B2B 72%);
     display: none;
